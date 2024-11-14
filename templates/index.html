@@ -1,11 +1,61 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Exam Performance Indicator</title>
+    <style>
+        /* CSS styling for index page */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4a90e2, #9013fe);
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        .container h1 { font-size: 2em; color: #333; margin-bottom: 15px; font-weight: bold; }
+        .container p { font-size: 1.1em; color: #666; margin-bottom: 25px; line-height: 1.6; }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #357ab8;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .btn:active {
+            background-color: #306a9c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-   <h1>Welcome to the home page</h1> 
+    <div class="container">
+        <h1>Welcome to the Student Exam Performance Indicator</h1>
+        <p>This application helps predict student performance based on various inputs. Click the button below to begin.</p>
+        <a href="{{ url_for('predict_datapoint') }}" class="btn btn-primary">Go and Predict Student Performance</a>
+    </div>
 </body>
 </html>
